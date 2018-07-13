@@ -18,8 +18,8 @@
             android:id="@+id/iv_return"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:scaleType="centerInside"
             android:src="@drawable/ic_return"/>
 
@@ -40,6 +40,7 @@
             android:layout_marginRight="@dimen/main_activity_horizontal_margin"
             android:scaleType="centerInside"
             android:src="@drawable/switch_screen_lcd_selector"
+            android:visibility="gone"
             />
 
         <ImageView
@@ -51,6 +52,7 @@
             android:layout_toLeftOf="@id/tv_switch_screen"
             android:scaleType="centerInside"
             android:src="@drawable/more_settings_lcd_selector"
+            android:visibility="gone"
             />
 
         <TextView
