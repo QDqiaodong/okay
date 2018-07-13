@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF0099FF</color>
+    <color name="colorPrimaryDark">@color/color_white</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_gray">#ff999999</color>
+    <color name="color_gray_light">#ffcccccc</color>
+    <color name="text_color_gray">#333029</color>
+    <color name="text_color_gray_66">#ff666666</color>
+    <color name="color_black">#FF000000</color>
+    <color name="color_white">#FFFFFFFF</color>
+    <color name="white">#ffffffff</color>
+    <color name="common_text_color">#FF333333</color>
+
+
+    <color name="alpha_20_percent_black">#33000000</color>
+    <color name="alpha_30_percent_black">#4D000000</color>
+    <color name="alpha_50_percent_black">#80000000</color>
+    <color name="alpha_80_percent_black">#CC000000</color>
+
+    <color name="item_selected_dark">#ffcccccc</color>
+    <color name="item_selected_light">#ffdddddd</color>
+
+    <color name="wkn_button_blue">#ff5cc1e5</color>
+    <color name="wkn_button_blue_pressed">#ff61b8d7</color>
+
+    <color name="blue_text">#ff3299cc</color>
+
+    <color name="segment_chart_stimulate_line">#ffFF7F50</color>
+    <color name="segment_chart_stimulate_fill">#bba0db21</color>
+    <color name="segment_chart_band_fill">#ff3299cc</color>
+
+    <!--阅读页底部字体颜色-->
+    <color name="book_read_bottom_text">#e6e6e6</color>
+    <color name="common_h2">#727272</color>
+    <color name="orange">#DE6014</color>
+
+    <color name="menu_top_bkg">#F7393532</color>
+    <color name="menu_top_btn_text_color_eink">#FF231803</color>
+    <color name="loading_text_color">@color/common_text_color</color>
+    <color name="loading_progressbar_bg_color">#FFE1DCD0</color>
+    <color name="lcd_menu_bottom_set_bg_color">#F73E3937</color>
+    <color name="lcd_menu_operator_set_bg_color">#F7332F28</color>
+    <color name="epd_menu_bottom_set_bg_color">#FFFFFFFF</color>
+
+    <color name="common_divider_line_color">#FFEAEAEA</color>
+    <color name="common_dialog_bg_color">#FFF5F5F5</color>
+    <color name="common_btn_disable_color">#FFC8C8C8</color>
+    <color name="common_btn_enable_color">#FF009688</color>
+    <color name="item_pressed_color">#E6E6E6</color>
+    <dimen name="dialog_title_margin_vertical">15dp</dimen>
+    <color name="line_gray">#ffdddddd</color>
+    <color name="gray_pressed">#fff4f4f4</color>
+    <color name="title_bar_normal">@color/common_text_color</color>
+    <color name="catalog_pop_window_bg">#FFF8F5F0</color>
+    <color name="catalog_book_name_color">#FF332F28</color>
+    <color name="catalog_book_author_color">#FFB3A78F</color>
+    <color name="catalog_divider_line_color">#FFEBE7DE</color>
+    <color name="epd_toast_bg_color">#FF000000</color>
+    <color name="default_pdf_view_loading_color">#FF897F70</color>
+    <color name="pdf_listview_divider_color">#CCCCCC</color>
+    <color name="pdf_listview_divider_presentation_color">#333333</color>
+    <color name="toast_bg_color">#CC000000</color>
+    <color name="seekbar_bg_color">#FFE6E6E6</color>
+    <color name="more_settings_text_bg_color">#FFE6E6E6</color>
+    <color name="seekbar_progress_color">#FF0099FF</color>
+    <color name="reader_file_bg_color">#F0F0F0</color>
+
+    <!--qiaodong 移植代码20170630 end-->
+</resources>

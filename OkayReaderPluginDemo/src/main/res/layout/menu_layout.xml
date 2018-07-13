@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/layout_menu_top"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_return"/>
+
+        <View
+            android:id="@+id/v_menu_return_line"
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_return"
+            android:background="#66000000"/>
+
+        <ImageView
+            android:id="@+id/tv_switch_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_activity_horizontal_margin"
+            android:scaleType="centerInside"
+            android:src="@drawable/switch_screen_lcd_selector"
+            />
+
+        <ImageView
+            android:id="@+id/tv_open_wps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="64dp"
+            android:layout_toLeftOf="@id/tv_switch_screen"
+            android:scaleType="centerInside"
+            android:src="@drawable/more_settings_lcd_selector"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_switch_screen"
+            android:layout_toRightOf="@id/v_menu_return_line"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="1"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_size_larger"/>
+
+        <View
+            android:id="@+id/v_menu_top_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_divider_line_color"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

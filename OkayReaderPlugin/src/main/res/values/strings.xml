@@ -1,0 +1,42 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">OkayReader</string>
+    <string name="progress_msg">"正在打开资料"</string>
+
+    <string name="book_read_fonts_size">字体大小</string>
+    <string name="book_read_mark">滑动阅读</string>
+    <string name="book_read_toc">目录</string>
+
+
+    <string name="menu_switch_screen">换屏阅读</string>
+    <string name="menu_browse_direction_up_down">上下浏览</string>
+    <string name="menu_browse_direction_left_right">左右浏览</string>
+    <string name="menu_more_settings">更多设置</string>
+    <string name="menu_edit">WPS</string>
+    <string name="menu_edit_mine">我的编辑</string>
+
+    <string name="dialog_title_quit">退出阅读器？</string>
+    <string name="dialog_btn_sure">确定</string>
+    <string name="dialog_btn_cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="page_index_already_begin">当前为第一页</string>
+    <string name="page_index_already_end">已达最后一页</string>
+    <string name="mode_change_dialog_msg">正在切换阅读模式</string>
+    <string name="orientation_change_dialog_msg">正在横竖屏幕切换</string>
+    <string name="screen_change_dialog_msg">正在上下屏幕切换</string>
+
+    <string name="file_open_error_tip_pdf_and_office_not_existed">该文档不存在</string>
+    <string name="file_open_error_tip_not_pdf">当前文档不是PDF格式，已为您自动跳转至WPS</string>
+    <string name="file_open_error_tip_office_not_existed">该源文件URL不存在</string>
+
+    <string name="guide_up_page">点击到上一页</string>
+    <string name="guide_down_page">点击到下一页</string>
+    <string name="guide_message_first">我知道了 1/2</string>
+    <string name="guide_message_second">我知道了 2/2</string>
+    <string name="guide_up_scroll">向上滑动翻页</string>
+    <string name="guide_menu">菜单栏</string>
+    <string name="default_pdf_view_loading">加载中，请稍后...</string>
+    <string name="cannot_open_file_Path">无法打开文件：%1$s</string>
+    <string name="cannot_open_buffer">无法打开缓冲器</string>
+</resources>

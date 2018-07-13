@@ -1,0 +1,173 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+apply plugin: 'maven'
+project.ext.config = [
+        "moduleSettings"         : [
+                "versionName": "1.2.2-SNAPSHOT",
+                "versionCode": 22],
+
+        "mavenRepositorySettings": [
+                "projectRepository" : "http://10.60.0.100:8081/repository/okayrom/",
+                "snapshotRepository": "http://10.60.0.100:8081/repository/okayrom_snapshot/",
+                "user"              : "zhantao",
+                "password"          : "123456"],
+
+        "mavenLibraySettings"    : [
+                "libName"   : "libOkayReaderPlugin",
+                "artifactId": "libOkayReaderPlugin",
+                "groupId"   : "com.okay.rom"]
+]
+
+
+//refresh ext.config if needed
+setConfigFromExternalParams()
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 22
+
+        if (project.ext.config.moduleSettings.versionName.contains("-SNAPSHOT")) {
+            defaultPublishConfig "debug"
+            println(project.name + ": defaultPublishConfig is debug")
+        } else {
+            defaultPublishConfig "release"
+            println(project.name + ": defaultPublishConfig is release")
+        }
+
+        versionCode project.ext.config.moduleSettings.versionCode
+        versionName project.ext.config.moduleSettings.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "build_config", "\"" + project.ext.config.toString() + "\""
+
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java','.apt_generated']
+            aidl.srcDirs = ['src/main/aidl','.apt_generated']
+            jniLibs.srcDirs = ['src/main/jniLibs']
+            assets.srcDirs = ['src/main/assets']
+            res.srcDirs =
+                    [
+                            'src/main/res/pdf',
+                            'src/main/res/txt',
+                            'src/main/res/epub',
+                            'src/main/res/'
+
+                    ]
+        }
+    }
+
+    greendao {
+        //版本号，升级时可配置
+        schemaVersion 1
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../sign/okay_rom.jks")
+            storePassword "okay2017"
+            keyAlias "okay_rom"
+            keyPassword "okay2017"
+        }
+
+        debug {
+            storeFile file("../sign/okay_rom.jks")
+            storePassword "okay2017"
+            keyAlias "okay_rom"
+            keyPassword "okay2017"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig  signingConfigs.release
+            //混淆
+            minifyEnabled true
+            //对齐
+            zipAlignEnabled true
+            //移除无用的resource 文件
+            shrinkResources true
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+}
+
+
+configurations.all {
+    // check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:22.1.0'
+    testCompile 'junit:junit:4.12'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'com.okay.rom:okayrom-lib-eink:0.0.1-SNAPSHOT'
+
+}
+
+
+repositories {
+    jcenter()
+
+    maven {
+        url project.ext.config.mavenRepositorySettings.projectRepository
+    }
+    maven {
+        url project.ext.config.mavenRepositorySettings.snapshotRepository
+    }
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: project.ext.config.mavenRepositorySettings.projectRepository) {
+            authentication(userName: project.ext.config.mavenRepositorySettings.user, password: project.ext.config.mavenRepositorySettings.password)
+        }
+
+        snapshotRepository(url: project.ext.config.mavenRepositorySettings.snapshotRepository) {
+            authentication(userName: project.ext.config.mavenRepositorySettings.user, password: project.ext.config.mavenRepositorySettings.password)
+        }
+
+        pom.version = project.ext.config.moduleSettings.versionName
+        pom.artifactId = project.ext.config.mavenLibraySettings.artifactId
+        pom.groupId = project.ext.config.mavenLibraySettings.groupId
+        pom.name = project.ext.config.mavenLibraySettings.libName
+        pom.packaging = 'aar'
+    }
+}
+
+def setConfigFromExternalParams() {
+    def config = project.ext.config
+
+    if (project.hasProperty('V_CODE')) {
+        config.moduleSettings.versionCode = Integer.parseInt(V_CODE)
+    } else {
+    }
+
+    if (project.hasProperty('V_NAME')) {
+        config.moduleSettings.versionName = V_NAME
+    } else {
+    }
+
+    println(project.name + ": ext.config: ")
+    println(new groovy.json.JsonBuilder(config).toPrettyString())
+}

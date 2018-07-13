@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/common_dialog_bg_color" />
+    <corners android:radius="@dimen/default_circle_radius_dialog_type" />
+    <stroke
+        android:width="@dimen/default_circle_indicator_stroke_width"
+        android:color="@color/white" />
+</shape>

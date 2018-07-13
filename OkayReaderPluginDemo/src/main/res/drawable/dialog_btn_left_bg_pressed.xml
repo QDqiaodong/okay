@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/common_btn_select_bg_color"/>
+    <corners
+        android:bottomLeftRadius="@dimen/default_circle_radius_dialog_type"
+        android:bottomRightRadius="0dp"
+        android:topLeftRadius="0dp"
+        android:topRightRadius="0dp"/>
+    <stroke
+        android:width="0dp"
+        android:color="@color/common_divider_line_color"/>
+</shape>

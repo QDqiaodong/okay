@@ -1,0 +1,76 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="BasePresentation" parent="android:Theme.Material.Dialog.Presentation">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+   <!-- <style name="BaseDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/shape_dialog_bg</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>-->
+
+ <!--   <style name="WhiteDialogButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/text_color_gray</item>
+        <item name="android:textSize">16sp</item>
+        &lt;!&ndash; <item name="android:textStyle">bold</item> &ndash;&gt;
+        <item name="android:minHeight">40dp</item>
+        <item name="android:background">@drawable/btn_white_dialog_bg</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>-->
+
+
+   <!-- <style name="CommonWhiteButtonText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/btn_state_color</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:state_focused">true</item>
+        <item name="android:clickable">true</item>
+    </style>-->
+
+    <style name="CommonTitleStyle">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/title_bar_normal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CommonContenMsgStyle">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/text_color_gray</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.FullScreen" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

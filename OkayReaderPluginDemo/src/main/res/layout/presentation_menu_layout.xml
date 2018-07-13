@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/layout_menu_top"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_return_eink_normal"/>
+
+        <View
+            android:id="@+id/v_menu_return_line"
+            android:layout_width="1px"
+            android:layout_height="24px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_return"
+            android:background="@color/color_black"/>
+
+        <ImageView
+            android:id="@+id/tv_switch_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="64px"
+            android:scaleType="centerInside"
+            android:src="@drawable/switch_screen_epd"
+            />
+
+        <ImageView
+            android:id="@+id/tv_open_wps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="64px"
+            android:layout_toLeftOf="@id/tv_switch_screen"
+            android:scaleType="centerInside"
+            android:src="@drawable/more_settings_epd"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="24px"
+            android:layout_marginRight="10px"
+            android:layout_toLeftOf="@id/tv_switch_screen"
+            android:layout_toRightOf="@id/v_menu_return_line"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="1"
+            android:textColor="@color/color_black"
+            android:textSize="24px"/>
+
+        <View
+            android:id="@+id/v_menu_top_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/black"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

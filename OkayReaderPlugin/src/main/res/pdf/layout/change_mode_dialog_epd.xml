@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="420px"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/common_white_corner_bg_epd"
+        >
+
+        <TextView
+            android:id="@+id/mode_change_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48px"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:textSize="22px"
+            android:text="@string/mode_change_dialog_msg"
+            />
+
+        <ImageView
+            android:id="@+id/mode_change_loading_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48px"
+            android:layout_marginTop="24px"
+            android:background="@drawable/mode_changing_epd"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

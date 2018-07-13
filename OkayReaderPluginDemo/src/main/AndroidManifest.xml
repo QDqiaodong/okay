@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.reader.plugin.demo">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"/>
+
+    <application
+        android:name=".ReaderPluginTestApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/okayreader"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.okay.reader.pdf.action"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+       <!-- <activity
+            android:name=".ReaderPluginTest"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+        </activity>-->
+        <activity
+            android:name=".ReaderPluginTest"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="userLandscape"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen"
+            >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,20 @@
+<resources>
+    <!--4.0副屏页面-->
+    <dimen name="guide_margin_left">32px</dimen>
+    <dimen name="guide_margin_right">32px</dimen>
+    <dimen name="guide_margin_top">30px</dimen>
+    <dimen name="guide_margin_bottom">64px</dimen>
+    <dimen name="guid_text_margin">40px</dimen>
+    <dimen name="guid_tow_panel_margin">14px</dimen>
+    <dimen name="guide_text_size">28px</dimen>
+    <dimen name="guide_text_bottom_margin">41px</dimen>
+    <dimen name="guide_first_image_width">52px</dimen>
+    <dimen name="guide_first_image_height">80px</dimen>
+    <dimen name="guide_second_image_width">94px</dimen>
+    <dimen name="guide_second_image_height">68px</dimen>
+    <dimen name="guide_message_text_width">238px</dimen>
+    <dimen name="guide_message_text_height">54px</dimen>
+    <dimen name="progress_text_size">16px</dimen>
+    <dimen name="progress_text_margin_bottom">32px</dimen>
+    <dimen name="progress_text_margin_right">36px</dimen>
+</resources>

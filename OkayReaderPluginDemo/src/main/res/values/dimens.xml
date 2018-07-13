@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="text_size_top_level">24sp</dimen>
+    <dimen name="text_size_second_level">21.33sp</dimen>
+    <dimen name="text_size_second_level_smaller">18.67sp</dimen>
+    <dimen name="text_size_third_level">16sp</dimen>
+    <dimen name="default_circle_radius_dialog_type">12dp</dimen>
+    <dimen name="common_dialog_title_top_margin">42.67dp</dimen>
+    <dimen name="common_dialog_title_bottom_margin">18.67dp</dimen>
+    <dimen name="common_white_margin_left">40dp</dimen>
+    <dimen name="common_dialog_button_margin_top">36.67dp</dimen>
+    <dimen name="common_divider_line_size">1px</dimen>
+    <dimen name="common_item_height">64dp</dimen>
+    <dimen name="main_title_bar_height">64dp</dimen>
+</resources>

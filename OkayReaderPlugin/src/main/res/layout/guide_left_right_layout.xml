@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#BF000000"
+              android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/guide_left"
+            android:drawablePadding="12dp"
+            android:gravity="center"
+            android:text="@string/guide_up_page"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            />
+
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/guide_line_left_right"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/guide_menu"
+            android:drawablePadding="12dp"
+            android:gravity="center"
+            android:text="@string/guide_menu"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            />
+
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/guide_line_left_right"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/guide_right"
+            android:drawablePadding="12dp"
+            android:gravity="center"
+            android:text="@string/guide_down_page"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!--<include layout="@layout/menu_layout"/>-->
+
+    <com.okay.reader.plugin.pdf.ui.view.MainLayout
+        android:id="@+id/layout_content"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <FrameLayout
+            android:id="@+id/flReadWidget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@color/reader_file_bg_color"
+            android:layerType="hardware"/>
+
+    </com.okay.reader.plugin.pdf.ui.view.MainLayout>
+
+</LinearLayout>
+
