@@ -20,6 +20,7 @@ import com.okay.reader.plugin.pdf.PDFViewer;
 public class ReaderPluginTest extends Activity implements View.OnClickListener {
 
     private static final String TAG = "ReaderPluginTest";
+    private static final String KEY = "cX1/PGB3c3Z3YDxifmd1e3w8dnd/fQ==\n";
     private String filePath;
     private TextView tvTitle;
     private View tvSwitchScreen;
@@ -110,7 +111,7 @@ public class ReaderPluginTest extends Activity implements View.OnClickListener {
 
     //TODO
     private void show() {
-        pdfViewer.displayFromPath(filePath)
+        pdfViewer.displayFromPath(filePath,KEY)
                 .onPageChangeListener(new PDFViewer.OnPageChangeListener() {
                     @Override
                     public void onPageChange(int selected) {

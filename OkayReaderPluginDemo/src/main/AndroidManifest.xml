@@ -43,6 +43,7 @@
             android:name=".ReaderPluginTest"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
+            android:screenOrientation="userLandscape"
             android:theme="@style/AppTheme.NoActionBar.FullScreen"
             >
         </activity>

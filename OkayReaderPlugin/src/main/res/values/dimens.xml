@@ -48,7 +48,7 @@
     <dimen name="catalog_book_page_num_text_size">16sp</dimen>
     <dimen name="pdf_listview_divder_height">16dp</dimen>
     <dimen name="more_settings_epd_stroke_width">2px</dimen>
-    <dimen name="progress_text_margin_bottom_main_screen">10dp</dimen>
-    <dimen name="progress_text_size_main_screen">12sp</dimen>
-    <dimen name="progress_text_margin_right_main_screen">10dp</dimen>
+    <dimen name="progress_text_margin_bottom_main_screen">32dp</dimen>
+    <dimen name="progress_text_size_main_screen">16sp</dimen>
+    <dimen name="progress_text_margin_right_main_screen">36dp</dimen>
 </resources>

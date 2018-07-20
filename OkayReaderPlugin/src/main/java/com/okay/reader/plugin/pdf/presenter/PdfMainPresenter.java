@@ -158,7 +158,9 @@ public class PdfMainPresenter implements PdfMainContract.IPresenter {
     @Override
     public void onDestroy() {
         LogUtils.d(TAG, "PdfMainPresenter onDestroy ");
-        PdfParseManager.getInstance().getImageLoader().changeMode();
+        if(PdfParseManager.getInstance().getImageLoader() != null){
+            PdfParseManager.getInstance().getImageLoader().changeMode();
+        }
         PdfParseManager.getInstance().close();
         mPdfActvity = null;
     }

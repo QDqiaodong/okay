@@ -13,12 +13,16 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        //创建so时，需要这么编译，引用时不需要
         ndk {
             moduleName "TestJNI"
+            ldLibs "log"
             abiFilters 'armeabi-v7a','armeabi', 'x86'//, , 'x86_64', 'arm64-v8a', mips, mips64...加入需要生成的文件夹
         }
     }
 
+
+    //引用so库
     sourceSets {
         main {
             jniLibs.srcDirs = ['src/main/jniLibs']

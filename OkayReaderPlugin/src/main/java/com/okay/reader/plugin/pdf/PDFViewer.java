@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.provider.Settings;
 import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -36,6 +37,7 @@ import com.okay.reader.plugin.pdf.ui.view.PDFListView;
 import com.okay.reader.plugin.pdf.ui.view.PDFViewPager;
 import com.okay.reader.plugin.utils.AppUtils;
 import com.okay.reader.plugin.utils.Constant;
+import com.okay.reader.plugin.utils.EncryptUtils;
 import com.okay.reader.plugin.utils.LogUtils;
 import com.okay.reader.plugin.utils.ReaderOkayAdapterMananger;
 import com.okay.reader.plugin.utils.SharedPreferencesUtil;
@@ -201,10 +203,18 @@ public class PDFViewer extends FrameLayout implements MainLayout.OnCenterClickLi
         }
     }
 
-    public Configurator displayFromPath(String filePath) {
+    public Configurator displayFromPath(String filePath, String key) {
         mCurrentState = PDFState.DEFAULT;
-        mPdfPresenter.initData(filePath);
-        PdfParseManager.getInstance().initPath(filePath, this);
+        if (TextUtils.isEmpty(key)) {
+            showErrorPage();
+        } else if (!EncryptUtils.isAuth(mContext, key)) {
+            LogUtils.d(TAG, "认证失败...key=" + key);
+            showErrorPage();
+        } else {
+            LogUtils.d(TAG, "认证通过...key=" + key);
+            mPdfPresenter.initData(filePath);
+            PdfParseManager.getInstance().initPath(filePath, this);
+        }
         return new Configurator();
     }
 
